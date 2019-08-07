@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 //         //Above is what happens if user requests home page, --> if user requests index page, go to indexRouter
-app.use('/about', aboutRouter );
+app.use('/about', aboutRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
