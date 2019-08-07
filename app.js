@@ -6,8 +6,11 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var aboutRouter = require('./routes/about');
+
 
 //    //IndexRouter is a variable and we assigned router page to it
+//require is calling another external node class
 
 var app = express();
 //     //assinging express is saying we can use everything from the express module. app. instead of express.
@@ -24,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 //         //Above is what happens if user requests home page, --> if user requests index page, go to indexRouter
+app.use('/about', aboutRouter );
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
