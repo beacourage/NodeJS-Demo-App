@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,19 +19,32 @@
 
   <body>
    <center>
+    <div id="root">
 
    <% include templates/navigation.ejs%>
 
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
      My name is <p><%= name%></p>
+
+
+       <% sd.forEach(function(item)
+       {%>
+        <li>Color is: <%=item.color%>. Value is: <%=item.value%> </li>
+        <%});%>
+  </div>
      </center>
-      <ul>
-          <% for(var i=0; i<5; i++){%>
-          <li>hi</li>
-          <%}%>
-          </ul>
+       <li> Above are JSON objects stored in json file. </li>
+      <li> JSON is stands for JavaScript Object Notation which is a format for storing and transporting data. </li>
+      <li> Uses human text to transfer/transport data objects </li>
+
+        <ul>
+        <% for(var i=0; i<5; i++){%>
+        <li>hi</li>
+            <%}%>
+        </ul>
   </body>
 </html>
+
 
 
