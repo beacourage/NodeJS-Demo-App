@@ -9,12 +9,13 @@ router.get('/', function(req, res) {
 
 
 
-
-//Whenever there is a request for the home page, perform function, takes a request, sends a response back.
-//So when request home page--> send a response, so render the index page and create some javascript variables.
-
+//So when user requests home page--> perform function and send a response, so render the index page and create some javascript variables.
 //Between the curly braces is where you define js variables.
 
 
 
 module.exports = router;
+
+
+
+//user requests index page in app.js, go to indexrouter, where it says render the index page
