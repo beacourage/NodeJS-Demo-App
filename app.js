@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var aboutRouter = require('./routes/about');
 
 
+
 //    //IndexRouter is a variable and we assigned router page to it
 //require is calling another external node class
 
@@ -25,15 +26,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-//         //Above is what happens if user requests home page, --> if user requests index page, go to indexRouter
-app.use('/about', aboutRouter);
+app.get('/', indexRouter);
+app.get('/about', aboutRouter);
 app.use('/users', usersRouter);
 
+
+
+//         //Above is what happens if user requests home page, --> if user requests index page, go to indexRouter
+
+
+
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// app.use(function(req, res, next) {
+//   next(createError(404));
+// });
 
 // error handler
 app.use(function(err, req, res, next) {

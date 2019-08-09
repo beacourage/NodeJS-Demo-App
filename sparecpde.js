@@ -9,7 +9,7 @@
 </ul>
 
 
-
+<% include templates/navigation.ejs%>
 
 
 

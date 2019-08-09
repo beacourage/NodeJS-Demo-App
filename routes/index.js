@@ -1,7 +1,6 @@
 // import React from "react";
 // ReactDOM.render(element, document.getElementById('root'));
 //
-
 var express = require('express');
 var router = express.Router();
 var dataa = require('../data.json');
