@@ -22,3 +22,8 @@ module.exports = router;
 
 
 //user requests index page in app.js, go to indexrouter, where it says render the index page
+
+
+//"Routes" to forward the supported requests (and any information encoded in request URLs) to the appropriate controller functions
+// Controller functions to get the requested data from the models,  and return it to the user to view in the browser. (render index page)
+//Views (templates) used by the controllers to render the data.
